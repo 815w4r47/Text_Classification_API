@@ -1,0 +1,43 @@
+{
+  "info": {
+    "name": "AI Text Classification API",
+    "description": "Classify customer text as Complaint, Query, Feedback, or Other.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Classify text",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"text\": \"I have contacted support twice and my refund still has not arrived. Can someone resolve this?\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/classify",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "classify"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
